@@ -1,0 +1,24 @@
+.iconMenu {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.iconMenu li {
+  position: relative;
+}
+
+.numberOfProducts {
+  position: absolute;
+  bottom: -0.5rem;
+  right: -0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background-color: var(--color-yellow);
+  font-size: 0.5rem;
+  font-weight: 700;
+}

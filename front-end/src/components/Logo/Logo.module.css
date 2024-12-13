@@ -1,0 +1,6 @@
+.logo {
+  text-align: center;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: var(--color-text-default);
+}
