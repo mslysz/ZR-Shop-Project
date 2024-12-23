@@ -4,12 +4,12 @@ import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { ProductsList } from './views/ProductsList/ProductsList.jsx';
+import { ProductDetails } from './views/ProductDetails/ProductDetails.jsx';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <ProductsList />,
+    element: <ProductDetails />,
   },
 ]);
 
