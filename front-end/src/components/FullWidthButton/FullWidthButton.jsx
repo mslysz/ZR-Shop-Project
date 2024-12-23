@@ -1,7 +1,11 @@
-import style from './FullWidthButton.module.css';
-export function FullWidthButton({ children, onClick }) {
+import styles from './FullWidthButton.module.css';
+
+export function FullWidthButton({ children, onClick, isBlack }) {
   return (
-    <button className={style.button} onClick={onClick}>
+    <button
+      className={`${styles.button} ${isBlack ? styles.black : ''}`}
+      onClick={onClick}
+    >
       {children}
     </button>
   );
