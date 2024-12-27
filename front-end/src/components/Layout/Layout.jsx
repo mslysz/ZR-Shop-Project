@@ -1,3 +1,4 @@
+import { Outlet } from 'react-router-dom';
 import { CategoryMenu } from '../CategoryMenu/CategoryMenu';
 import { CurrencySelector } from '../CurrencySelector/CurrencySelector';
 import { Footer } from '../Footer/Footer';
@@ -7,7 +8,7 @@ import { MainContent } from '../MainContent/MainContent';
 import { MainMenu } from '../MainMenu/MainMenu';
 import { TopBar } from '../TopBar/TopBar';
 
-export function Layout({ children }) {
+export function Layout() {
   return (
     <>
       <MainContent>
@@ -20,9 +21,8 @@ export function Layout({ children }) {
           </div>
         </TopBar>
         <CategoryMenu />
-        {children}
       </MainContent>
-
+      <Outlet />
       <Footer />
     </>
   );
