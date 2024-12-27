@@ -6,6 +6,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { Cart } from './views/Cart/Cart.jsx';
 import { Favourites } from './views/Favourites/Favourites.jsx';
 import { Layout } from './components/Layout/Layout.jsx';
+import { MainPage } from './views/MainPage/MainPage.jsx';
+import { mainPageLoader } from './api/mainPageLoader/mainPageLoader.js';
 
 const router = createBrowserRouter([
   {
@@ -13,12 +15,17 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: 'koszyk',
+        path: '/koszyk',
         element: <Cart />,
       },
       {
-        path: 'ulubione',
+        path: '/ulubione',
         element: <Favourites />,
+      },
+      {
+        path: '/:gender?',
+        element: <MainPage />,
+        loader: mainPageLoader,
       },
     ],
   },
