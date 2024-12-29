@@ -10,8 +10,12 @@ import { MainPage } from './views/MainPage/MainPage.jsx';
 import { ProductsList } from './views/ProductsList/ProductsList.jsx';
 import { mainPageLoader } from './api/mainPageLoader.js';
 import { productListLoader } from './api/productListLoader.js';
-
+import { addProductToFavourites } from './api/addProductToFavouritesAction.js';
 const router = createBrowserRouter([
+  {
+    path: '/add-to-favourites/:productId',
+    action: addProductToFavourites,
+  },
   {
     path: '',
     element: <Layout />,
