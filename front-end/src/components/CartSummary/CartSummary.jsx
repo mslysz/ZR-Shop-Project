@@ -1,6 +1,7 @@
 import styles from './CartSummary.module.css';
+
 import { FullWidthButton } from '../FullWidthButton/FullWidthButton';
-import CAR_ICON from '../../assets/delivery.png';
+import CAR_ICON from '../../assets/car.svg';
 import { useContext } from 'react';
 import { CurrencyContext } from '../../contexts/CurrencyContext';
 import { CURRENCIES, CURRENCY_SIGN } from '../../constants/currencies';
@@ -12,6 +13,7 @@ export function CartSummary({ products }) {
     [CURRENCIES.USD]: 10,
     [CURRENCIES.PLN]: 49,
   };
+
   const minSumsForFreeDelivery = {
     [CURRENCIES.USD]: 100,
     [CURRENCIES.PLN]: 500,
@@ -33,7 +35,7 @@ export function CartSummary({ products }) {
     <div className={styles.cartSummary}>
       <h2>Podsumowanie</h2>
       <div className={styles.cartRow}>
-        <p>Wartość produktów</p>
+        <p>Wartość produktów: </p>
         <p>
           {sum}
           {currencySign}
@@ -46,19 +48,19 @@ export function CartSummary({ products }) {
           {currencySign}
         </p>
       </div>
-      <div className={`${styles.cartRow} ${styles.summarySummaryRow}`}>
+      <div className={`${styles.cartRow} ${styles.cartSummaryRow}`}>
         <p>Do zapłaty:</p>
         <p>
           {totalCost}
           {currencySign}
         </p>
       </div>
-      <FullWidthButton isBlack={true}>Do kasy:</FullWidthButton>
+      <FullWidthButton isBlack={true}>Do kasy</FullWidthButton>
       <div className={styles.deliveryInfo}>
         <img src={CAR_ICON} />
         <p>
           Darmowa dostawa od {minSumForFreeDelivery}
-          {currencySign}{' '}
+          {currencySign}
         </p>
       </div>
     </div>
